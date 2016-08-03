@@ -1,0 +1,9 @@
+//Nome do método apresentado na integração com a Jaguar
+public class teste {
+	
+	public static void main(String[]Args){
+	String a="coverage_controlflow_ZoltarHeuristic_hierarchical_1459906640999";
+	String b = a.substring(21, a.lastIndexOf("Heuristic_"));
+	 System.out.println(b);
+	}
+}

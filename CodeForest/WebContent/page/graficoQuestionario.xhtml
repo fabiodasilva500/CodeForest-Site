@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+<h:outputStylesheet name="estiloTelaAberta.css" library="css" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Avaliação de usabilidade</title>
+</h:head>
+
+<h:body>
+<f:view contentType="text/html">
+
+<div id="corpo">
+
+
+<h:form id="formInstalacao">
+<p:growl id="mensagem" showDetail="true" sticky="true" />  
+ <p:tabView id="tabView" size="300">  
+  <p:tab title="Bem Vindo ao Sistema CodeForest">
+ 
+
+		<div id="topo">
+
+	<h:graphicImage value="/resources/imagens/each.jpg" 
+	style="width: 539px; height: 91px;"/>
+
+		</div>
+
+<p align="Right">
+<h:commandLink action="./index.jsf">  Voltar </h:commandLink>  
+</p>
+			<p:fieldset legend="${graficoQuestionarioMB.questaoAtual()}">
+		
+		<p:selectBooleanCheckbox value="#{graficoQuestionarioMB.habilitaQuestao}">
+            <p:ajax update="pergunta0"  listener="#{graficoQuestionarioMB.habilitaGrafico(0)}" />
+  
+            </p:selectBooleanCheckbox>
+                          <h:panelGroup id="pergunta0" >
+                            <h:panelGrid columns="2" style="margin: 0 auto;"
+                                rendered="#{graficoQuestionarioMB.habilitaQuestao}">          
+	            <p:pieChart type="pie" id="questao0" value="#{graficoQuestionarioMB.graficoQuestoes()}"
+	             legendPosition="e"  showDataLabels="true"
+         	 style="width:600px;height:500px" />    
+                            </h:panelGrid>
+                        </h:panelGroup>
+			           </p:fieldset>
+			 <br></br>
+			   
+	<p:fieldset legend="${graficoQuestionarioMB.questaoAtual()}">
+		<p:selectBooleanCheckbox value="#{graficoQuestionarioMB.habilitaQuestao}">
+            <p:ajax update="pergunta1"  listener="#{graficoQuestionarioMB.habilitaGrafico(1)}" />
+  
+            </p:selectBooleanCheckbox>
+                        <h:panelGroup id="pergunta1">
+                            <h:panelGrid columns="2" style="margin: 0 auto;"
+                                rendered="#{graficoQuestionarioMB.habilitaQuestao}">          
+	            <p:pieChart type="pie" id="questao1" value="#{graficoQuestionarioMB.graficoQuestoes()}"
+	             legendPosition="e"  showDataLabels="true"
+         	 style="width:600px;height:500px" />    
+                            </h:panelGrid>
+                        </h:panelGroup>
+			           </p:fieldset>
+		  <br></br>
+			
+			
+		<p:fieldset legend="${graficoQuestionarioMB.questaoAtual()}">
+		<p:selectBooleanCheckbox value="#{graficoQuestionarioMB.habilitaQuestao}">
+            <p:ajax update="pergunta2"  listener="#{graficoQuestionarioMB.habilitaGrafico(2)}" />
+  
+            </p:selectBooleanCheckbox>
+                        <h:panelGroup id="pergunta2">
+                            <h:panelGrid columns="2" style="margin: 0 auto;"
+                                rendered="#{graficoQuestionarioMB.habilitaQuestao}">          
+	            <p:pieChart type="pie" id="questao2" value="#{graficoQuestionarioMB.graficoQuestoes()}"
+	             legendPosition="e"  showDataLabels="true"
+         	 style="width:600px;height:500px" />    
+                            </h:panelGrid>
+                        </h:panelGroup>
+			           </p:fieldset>
+	 	<br></br>
+			           
+			           
+		<p:fieldset legend="${graficoQuestionarioMB.questaoAtual()}">
+		<p:selectBooleanCheckbox value="#{graficoQuestionarioMB.habilitaQuestao}">
+            <p:ajax update="pergunta3"  listener="#{graficoQuestionarioMB.habilitaGrafico(3)}" />
+  
+            </p:selectBooleanCheckbox>
+                        <h:panelGroup id="pergunta3">
+                            <h:panelGrid columns="2" style="margin: 0 auto;"
+                                rendered="#{graficoQuestionarioMB.habilitaQuestao}">          
+	            <p:pieChart type="pie" id="questao3" value="#{graficoQuestionarioMB.graficoQuestoes()}"
+	             legendPosition="e"  showDataLabels="true"
+         	 style="width:600px;height:500px" />    
+                            </h:panelGrid>
+                        </h:panelGroup>
+			           </p:fieldset>
+		 <br></br>
+			
+			
+		<p:fieldset legend="${graficoQuestionarioMB.questaoAtual()}">
+		<p:selectBooleanCheckbox value="#{graficoQuestionarioMB.habilitaQuestao}">
+            <p:ajax update="pergunta4"  listener="#{graficoQuestionarioMB.habilitaGrafico(4)}" />
+  
+            </p:selectBooleanCheckbox>
+                        <h:panelGroup id="pergunta4">
+                            <h:panelGrid columns="2" style="margin: 0 auto;"
+                                rendered="#{graficoQuestionarioMB.habilitaQuestao}">          
+	            <p:pieChart type="pie" id="questao4" value="#{graficoQuestionarioMB.graficoQuestoes()}"
+	             legendPosition="e"  showDataLabels="true"
+         	 style="width:600px;height:500px" />    
+                            </h:panelGrid>
+                        </h:panelGroup>
+			           </p:fieldset>
+			<br></br>
+			
+	
+			<p:fieldset legend="${graficoQuestionarioMB.questaoAtual()}">
+		<p:selectBooleanCheckbox value="#{graficoQuestionarioMB.habilitaQuestao}">
+            <p:ajax update="pergunta5"  listener="#{graficoQuestionarioMB.habilitaGrafico(5)}" />
+  
+            </p:selectBooleanCheckbox>
+                        <h:panelGroup id="pergunta5">
+                            <h:panelGrid columns="2" style="margin: 0 auto;"
+                                rendered="#{graficoQuestionarioMB.habilitaQuestao}">          
+	            <p:pieChart type="pie" id="questao5" value="#{graficoQuestionarioMB.graficoQuestoes()}"
+	             legendPosition="e"  showDataLabels="true"
+         	 style="width:600px;height:500px" />    
+                            </h:panelGrid>
+                        </h:panelGroup>
+			           </p:fieldset>
+		   <br></br>
+			
+			
+			
+		<p:fieldset legend="${graficoQuestionarioMB.questaoAtual()}">
+		<p:selectBooleanCheckbox value="#{graficoQuestionarioMB.habilitaQuestao}">
+            <p:ajax update="pergunta6"  listener="#{graficoQuestionarioMB.habilitaGrafico(6)}" />
+  
+            </p:selectBooleanCheckbox>
+                        <h:panelGroup id="pergunta6">
+                            <h:panelGrid columns="2" style="margin: 0 auto;"
+                                rendered="#{graficoQuestionarioMB.habilitaQuestao}">          
+	            <p:pieChart type="pie" id="questao6" value="#{graficoQuestionarioMB.graficoQuestoes()}"
+	             legendPosition="e"  showDataLabels="true"
+         	 style="width:600px;height:500px" />    
+                            </h:panelGrid>
+                             </h:panelGroup>
+			           </p:fieldset>
+			<br></br>
+			
+			
+				<p:fieldset legend="${graficoQuestionarioMB.questaoAtual()}">
+		<p:selectBooleanCheckbox value="#{graficoQuestionarioMB.habilitaQuestao}">
+            <p:ajax update="pergunta7"  listener="#{graficoQuestionarioMB.habilitaGrafico(7)}" />
+  
+            </p:selectBooleanCheckbox>
+                        <h:panelGroup id="pergunta7">
+                            <h:panelGrid columns="2" style="margin: 0 auto;"
+                                rendered="#{graficoQuestionarioMB.habilitaQuestao}">          
+	            <p:pieChart type="pie" id="questao7" value="#{graficoQuestionarioMB.graficoQuestoes()}"
+	             legendPosition="e"  showDataLabels="true"
+         	 style="width:600px;height:500px" />    
+                            </h:panelGrid>
+                        </h:panelGroup>
+			           </p:fieldset>
+		<br></br>
+			
+			
+		<p:fieldset legend="${graficoQuestionarioMB.questaoAtual()}">
+		<p:selectBooleanCheckbox value="#{graficoQuestionarioMB.habilitaQuestao}">
+            <p:ajax update="pergunta8"  listener="#{graficoQuestionarioMB.habilitaGrafico(8)}" />
+  
+            </p:selectBooleanCheckbox>
+                        <h:panelGroup id="pergunta8">
+                            <h:panelGrid columns="2" style="margin: 0 auto;"
+                                rendered="#{graficoQuestionarioMB.habilitaQuestao}">          
+	            <p:pieChart type="pie" id="questao8" value="#{graficoQuestionarioMB.graficoQuestoes()}"
+	             legendPosition="e"  showDataLabels="true"
+         	 style="width:600px;height:500px" />    
+                            </h:panelGrid>
+                        </h:panelGroup>
+			           </p:fieldset>
+		<br></br>
+			           
+			           
+	<p:fieldset legend="${graficoQuestionarioMB.questaoAtual()}">
+		<p:selectBooleanCheckbox value="#{graficoQuestionarioMB.habilitaQuestao}">
+            <p:ajax update="pergunta9"  listener="#{graficoQuestionarioMB.habilitaGrafico(9)}" />
+  
+            </p:selectBooleanCheckbox>
+                        <h:panelGroup id="pergunta9">
+                            <h:panelGrid columns="2" style="margin: 0 auto;"
+                                rendered="#{graficoQuestionarioMB.habilitaQuestao}">          
+	            <p:pieChart type="pie" id="questao9" value="#{graficoQuestionarioMB.graficoQuestoes()}"
+	             legendPosition="e"  showDataLabels="true"
+         	 style="width:600px;height:500px" />    
+                            </h:panelGrid>
+                        </h:panelGroup>
+			           </p:fieldset>
+		<br></br>
+			
+			
+		<p:fieldset legend="${graficoQuestionarioMB.questaoAtual()}">
+		<p:selectBooleanCheckbox value="#{graficoQuestionarioMB.habilitaQuestao}">
+            <p:ajax update="pergunta10"  listener="#{graficoQuestionarioMB.habilitaGrafico(10)}" />
+  
+            </p:selectBooleanCheckbox>
+                          <h:panelGroup id="pergunta10">
+                            <h:panelGrid columns="2" style="margin: 0 auto;"
+                                rendered="#{graficoQuestionarioMB.habilitaQuestao}">          
+	            <p:pieChart type="pie" id="questao10" value="#{graficoQuestionarioMB.graficoQuestoes()}"
+	             legendPosition="e"  showDataLabels="true"
+         	 style="width:600px;height:500px" />    
+                            </h:panelGrid>
+                        </h:panelGroup>
+   			           </p:fieldset>
+			
+			
+
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			
+			</p:tab>
+</p:tabView>
+
+</h:form>
+
+	</div>
+</f:view>
+</h:body>
+</html>

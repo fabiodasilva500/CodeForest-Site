@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+<h:outputStylesheet name="estiloTelaAberta.css" library="css" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Instalação da CodeForest</title>
+</h:head>
+
+<h:body>
+<f:view contentType="text/html">
+
+<div id="corpo">
+
+
+<h:form id="formInstalacao">
+<p:growl id="mensagem" showDetail="true" sticky="true" />  
+ <p:tabView id="tabView" size="300">  
+  <p:tab title="Bem Vindo ao Sistema CodeForest">
+ 
+
+		<div id="topo">
+
+	<h:graphicImage value="/resources/imagens/each.jpg" 
+	style="width: 539px; height: 91px;"/>
+
+		</div>
+
+<p align="Right">
+<h:commandLink action="./index.jsf">  Voltar </h:commandLink>  
+</p>
+
+		
+
+			<p:fieldset legend="Acessando o repositório do Git">
+				<h:panelGrid columns="2" cellpadding="10">	
+					<h:outputText
+						value="Para a instalação da ferramenta CodeForest é necessário acessar o repositório do Git em que ela está disponível no seguinte https://github.com/henriquelemos0/code-forest" />
+				</h:panelGrid>
+								<p:graphicImage value="/resources/instalacao/imagem1.jpg"/>
+			
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			
+		<p:fieldset legend="Clonando o projeto">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Em seguida, o endereço de download da CodeForest deve ser copiado e por meio do prompt de comando do Git o projeto deve ser clonado em algum diretório do computador local." />
+
+				</h:panelGrid>
+								<p:graphicImage value="/resources/instalacao/imagem2.jpg"/>
+			
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			
+			<p:fieldset legend="Realizando a importação como projeto Maven">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Após a realização do download, ele deve ser importado no Eclipse como um projeto Maven." />
+				</h:panelGrid>
+					<center> 
+								<p:graphicImage value="/resources/instalacao/imagem3.jpg"/>
+					</center>
+			</p:fieldset>
+			
+			<br></br>
+			<br></br>
+			<br></br>
+
+
+			<p:fieldset legend="Estrutura dos Diretórios">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Na tela seguinte é apresentada a estrutura dos diretórios que serão criados." />
+				</h:panelGrid>
+				<center> 
+								<p:graphicImage value="/resources/instalacao/imagem4.jpg"/>
+			</center>
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+		
+			<p:fieldset legend="Estrutura do Projeto">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Ao término da importação o projeto será criado no Eclipse, em que o pacote 'br.usp.each.saeg.code.forest.ui' deve apresentar todos os diretórios da CodeForest em uma estrutura de pacotes como em qualquer projeto Java." />
+				</h:panelGrid>
+								<p:graphicImage value="/resources/instalacao/imagem5.jpg"/>
+			
+			</p:fieldset>
+			
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			
+			<p:fieldset legend="Gerando o plugin para configuração">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="A geração do .Jar da CodeForest deve ocorrer exportando o projeto como 'Plug-in Development' e selecionando a opção 'Deployable plug-ins and fragments'." />
+				</h:panelGrid>
+								<center> 
+								<p:graphicImage value="/resources/instalacao/imagem6.jpg"/>
+								</center>	
+			</p:fieldset>
+		
+			<br></br>
+			<br></br>
+			<br></br>
+		
+		
+		<p:fieldset legend="Escolhendo o diretório">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Em seguida deve ser selecionado o caminho em que o arquivo será gerado." />
+
+				</h:panelGrid>
+						<center>
+								<p:graphicImage value="/resources/instalacao/imagem7.jpg"/>
+						</center>
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+				
+		<p:fieldset legend="Verificando o arquivo gerado">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Será criado um diretório com o nome 'plugins' no caminho especificado anteriormente contendo o arquivo executável da ferramenta." />
+
+				</h:panelGrid>
+								<p:graphicImage value="/resources/instalacao/imagem8.jpg"/>
+			
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+		 <p:fieldset legend="Copiando o .Jar para o diretório 'plugins' do Eclipse">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="O arquivo gerado deve ser copiado para o diretório '/plugins' do eclipse" />
+				</h:panelGrid>
+								<p:graphicImage value="/resources/instalacao/imagem9.jpg"/>
+			
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+
+				
+		 <p:fieldset legend="Demonstrando a CodeForest configurada no Eclipse">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Por último, ao selecionar um projeto com o botão direito o ícone da CodeForest será exibido." />
+
+				</h:panelGrid>
+								<p:graphicImage value="/resources/instalacao/imagem10.jpg"/>
+			
+			</p:fieldset>
+		
+			<br></br>
+			<br></br>
+			<br></br>
+		
+		
+			
+			</p:tab>
+</p:tabView>
+
+</h:form>
+
+	</div>
+</f:view>
+</h:body>
+</html>

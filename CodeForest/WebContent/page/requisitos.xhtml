@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+<h:outputStylesheet name="estiloTelaAberta.css" library="css" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Requisitos para a instalação</title>
+</h:head>
+
+<h:body>
+<f:view contentType="text/html">
+
+<div id="corpo">
+
+
+<h:form id="formRequisitos">
+<p:growl id="mensagem" showDetail="true" sticky="true" />  
+ <p:tabView id="tabView" size="300">  
+  <p:tab title="Bem Vindo ao Sistema CodeForest">
+ 
+
+		<div id="topo">
+
+	<h:graphicImage value="/resources/imagens/each.jpg" 
+	style="width: 539px; height: 91px;"/>
+
+		</div>
+
+<p align="Right">
+<h:commandLink action="./index.jsf">  Voltar </h:commandLink>  
+</p>
+
+		
+
+			<p:fieldset legend="Requisitos para a instalação">
+			<br> </br>
+			<p:outputLabel>2 GB de Memória RAM. </p:outputLabel>
+			<br> </br>
+			<p:outputLabel>Computador de processador de no mínimo dois núcleos. </p:outputLabel>
+			<br> </br>
+			<p:outputLabel>A ferramenta necessita de recursos robustos para apresentação da floresta de cactus por isso é importante ter uma placa de vídeo compatível com tal necessidade.</p:outputLabel>
+			<br> </br>
+			
+			<p:outputLabel>GIT. </p:outputLabel>
+			<br> </br>
+					 
+			<p:outputLabel>Maven. </p:outputLabel>
+			<br> </br>
+					
+			<p:outputLabel>Eclipse. </p:outputLabel>
+			<br></br>
+			<br></br>
+			<br></br>			
+			</p:fieldset>
+
+		</p:tab>				
+</p:tabView>
+
+
+</h:form>
+
+	</div>
+</f:view>
+</h:body>
+</html>

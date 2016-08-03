@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+
+
+
+	<h:outputStylesheet name="estilo.css" library="css" /> 
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>CodeForest tool</title>
+	
+</h:head>
+
+
+<h:body>
+
+	<div id="corpo">
+		<div id="topo">
+	<h:graphicImage value="/resources/imagens/each.jpg" 
+	style="width: 539px; height: 91px;"/>
+	</div>
+
+
+		<h:form id="formIndex">
+		<p:growl id="mensagem" showDetail="true" sticky="true" />  
+		
+
+		<div id="sse50">
+			<div id="sses50">
+				<ul>
+					<li><a href="requisitos.jsf">Requisitos básicos</a></li>
+				    <li> <h:commandLink action="#{instalacaoMB.instalacaoAutomatica()}">  Instalar automaticamente </h:commandLink>  </li>					
+					<li><a href="instalacao.jsf">Instalação Completa</a></li>
+					<li><a href="exemploDeUso.jsf">Exemplo de uso</a></li>
+					<li><a href="questionario.jsf">Questionário</a> </li>
+					<li><a href="graficoQuestionario.jsf">Avaliação de usabilidade</a> </li>
+					<li><a href="faleConosco.jsf">Fale Conosco</a></li>
+				</ul>
+			</div>
+		</div>
+</h:form>
+		
+		<div id="fieldSet">
+		
+		<p align="Center">
+<font size="3">
+<a href="videoTutorial.jsf">Vídeo tutorial</a>
+</font> 
+</p>
+		
+		
+
+			<p:fieldset legend="CodeForest">
+				<h:panelGrid columns="2" cellpadding="10">
+					<p:graphicImage value="/resources/imagens/codeforest.jpg" />
+					<h:outputText
+						value="A CodeForest é uma ferramenta proposta com o objetivo de auxiliar os desenvolvedores
+						na localização de defeitos por meio de representações visuais tridimensionais 	através de uma floresta de cactus que demonstra os elementos mais suspeitos de um programa.
+						Embora tenha ocorrido evoluções ao longo dos últimos anos na construção de aplicações que possam contribuir com o trabalho de desenvolvedores para a localização de defeitos nenhuma delas foi levada a ambientes industriais e não possuem resultados
+						significativos de sua eficiência." />
+
+
+
+				</h:panelGrid>
+			</p:fieldset>
+
+
+			<p:fieldset legend="Como ela funciona?">
+				<h:panelGrid columns="2" cellpadding="10">
+					<p:graphicImage value="/resources/imagens/codeforest2.jpg" />
+
+					<h:outputText
+						value="A CodeForest
+recebe listas de classes, métodos e blocos suspeitos (conjunto de instruções executadas em
+sequência) para construir uma foresta de cactos tridimensional representando o programa
+inspecionado. Na CodeForest, as classes são cactos, os métodos são galhos e os comandos
+executados em sequência são espinhos. Os elementos mais suspeitos da foresta são pintados
+de vermelho. Quanto mais um elemento (classe, método ou declaração) for executado
+por um caso de teste que falhou mais suspeito ele é." />
+				</h:panelGrid>
+			</p:fieldset>
+
+
+
+			<p:fieldset legend="Desafio">
+				<h:panelGrid columns="2" cellpadding="10">
+					<p:graphicImage value="/resources/imagens/desafio.jpg" />
+
+					<h:outputText
+						value="Diante da necessidade do desenvolvimento de novas ferramentas que auxiliem os desenvolvedores na atividade de depuração,
+						o principal desafio da CodeForest é agilizar o trabalho de programadores na localização de defeitos, com um alto grau de usabilidade e eficiência
+						em comparação com as técnicas de apresentação de informações de forma textual. Para isso, será realizada uma avaliação abrangente em ambientes
+						reais visando entender se representações gráficas podem contribuir para a diminuição do tempo gasto nessa atividade que representa uma parcela significativa de tempo no cotidiano
+						dos profissionais." />
+				</h:panelGrid>
+			</p:fieldset>
+
+		</div>
+
+
+
+	</div>
+</h:body>
+</html>

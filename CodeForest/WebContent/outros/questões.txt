@@ -1,0 +1,59 @@
+1) Você conseguiu localizar o defeito através do uso da ferramenta?
+A) Sim, consegui localizá-lo.
+B) Não, não consegui encontrar o defeito.
+
+2) Em torno de quanto tempo você demorou em média para encontrá-lo?
+A) Mais de duas horas.
+B) Uma hora e meia.
+C) Uma hora.
+D) Trinta minutos.
+E) Abaixo de trinta minutos.
+F) Não encontrei o defeito.
+
+3) Você teve dificuldades no entendimento da CodeForest?
+A) Sim, tive muitas dificuldades que atrapalharam o meu trabalho.
+B) Sim, tive dificuldades; mas consegui entender as suas principais funcionalidades.
+C) Não tive dificuldades.
+
+4) Durante o uso da ferramenta em algum momento o Eclipse chegou a ser abortado?
+A) Sim, ele chegou a ser abortado.
+B) Não, a IDE funcionou normalmente.
+
+5) Qual foi o sistema operacional utilizado?
+A) Windows 10.
+B) Windows 8.
+C) Windows 7.
+D) Alguma distribuição Linux.
+
+6) Dentre as opções abaixo, qual foi o principal problema enfrentado durante o manuseio da CodeForest?
+A) Falta de documentação.
+B) Representação dos artefatos do programa através da floresta de cactus.
+C) Forma de coloração dos elementos mais suspeitos da aplicação.
+D) Configuração do sistema.
+E) Não tive problemas.
+
+7) Em algum momento houve a necessidade de optar por outros recursos para tentar localizar o defeito?
+A) Sim, optei por outras formas de representações.
+B) Não, a ferramenta foi suficiente.
+
+8) Você achou a forma de apresentação de informações adequada para a localização do defeito?
+A) Sim, sem ressalvas.
+B) Sim, com ressalvas.
+C) Não, ela não é adequada.
+
+9) Qual característica é mais importante em sua concepção que uma ferramenta deve conter para que realmente possa auxiliá-lo durante a depuração?
+A) Recursos sonoros.
+B) Representações visuais.
+C) Comunicação interativa por meio de perguntas e respostas.
+D) Aplicações de análise e diagnóstico que avaliem além da localização de defeitos a qualidade do código desenvolvido.
+E) Ferramentas interativas, seja ela visual ou não, que auxiliem você na tomada de decisão.
+
+10) Após a experiência de uso inicial com a CodeForest, qual técnica você acha mais adequada para a localização de defeitos em um programa?
+A) Depuração tradicional através de breakpoints na aplicação.
+B) Testes automatizados com frameworks como o JUNIT
+C) Técnicas de instrumentação como a Jaguar. 
+D) Ferramentas visuais.
+
+11) Você acha que a CodeForest já é capaz de ser utilizada na indústria?
+A) Sim, ela pode e contribuirá muito com o trabalho dos profissionais.
+B) Não, ela ainda necessita de muitas melhorias.

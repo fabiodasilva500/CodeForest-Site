@@ -1,0 +1,104 @@
+create database codeforest
+
+use codeforest
+
+
+
+create table questao(
+idQuestao int identity (1,1) not null,
+titulo varchar(300) not null,
+primary key (idQuestao)
+)
+
+create table opcao(
+idOpcao  int identity (1,1) not null,
+idQuestao int  not null,
+descricao varchar(300) not null,
+primary key (idOpcao, idQuestao),
+foreign key (idQuestao) references questao (idQuestao)
+)
+
+create table resposta
+(
+idResposta int identity (1,1) not null,
+idQuestao int  not null,
+idOpcao int not null,
+primary key (idResposta, idQuestao, idOpcao),
+foreign key (idOpcao, idQuestao) references opcao (idOpcao, idQuestao)
+)
+
+insert into questao values
+('Você conseguiu localizar o defeito através do uso da ferramenta?'),
+(' Em torno de quanto tempo você demorou em média para encontrá-lo?'),
+('Você teve dificuldades no entendimento da CodeForest?'),
+('Durante o uso da ferramenta em algum momento o Eclipse chegou a ser abortado?'),
+('Qual foi o sistema operacional utilizado?'),
+('Dentre as opções abaixo, qual foi o principal problema enfrentado durante o manuseio da CodeForest?'),
+('Em algum momento houve a necessidade de optar por outros recursos para tentar localizar o defeito?'),
+('Você achou a forma de apresentação de informações adequada para a localização do defeito?'),
+('Qual característica é mais importante em sua concepção que uma ferramenta deve conter para que realmente possa auxiliá-lo durante a depuração?'),
+(' Após a experiência de uso inicial com a CodeForest, qual técnica você acha mais adequada para a localização de defeitos em um programa?'),
+('Você acha que a CodeForest já é capaz de ser utilizada na indústria?')
+
+INSERT INTO opcao values 
+(1, 'A) Sim, consegui localizá-lo.'),
+(1, 'B) Não, não consegui encontrar o defeito.'),
+
+(2, 'A) Mais de duas horas.'),
+(2, 'B) Uma hora e meia.'),
+(2, 'C) Uma hora.'),
+(2, 'D) Trinta minutos.'),
+(2, 'E) Abaixo de trinta minutos.'),
+(2, 'F) Não encontrei o defeito.'),
+
+(3, 'A) Sim, tive muitas dificuldades que atrapalharam o meu trabalho.'),
+(3, 'B) Sim, tive dificuldades; mas consegui entender as suas principais funcionalidades.'),
+(3, 'C) Não tive dificuldades.'),
+
+(4, 'A) Sim, ele chegou a ser abortado.'),
+(4, 'B) Não, a IDE funcionou normalmente.'),
+
+(5, 'A) Windows 10.'),
+(5, 'B) Windows 8.'),
+(5, 'C) Windows 7.'),
+(5, 'D) Alguma distribuição Linux.'),
+
+(6, 'A) Falta de documentação.'),
+(6, 'B) Representação dos artefatos do programa através da floresta de cactus.'),
+(6, 'C) Forma de coloração dos elementos mais suspeitos da aplicação.'),
+(6, 'D)  Configuração do sistema.'),
+(6, 'E) Não tive problemas.'),
+
+
+(7, 'A) Sim, optei por outras formas de representações.'),
+(7, 'B) Não, a ferramenta foi suficiente.'),
+
+(8, 'A) Sim, sem ressalvas.'),
+(8, 'B) Sim, com ressalvas.'),
+
+(9, 'A) Recursos sonoros.'),
+(9, 'B) Representações visuais.'),
+(9, 'C) Comunicação interativa por meio de perguntas e respostas.'),
+(9, 'D) Aplicações de análise e diagnóstico que avaliem além da localização de defeitos a qualidade do código desenvolvido.'),
+(9, 'E) Ferramentas interativas, seja ela visual ou não, que auxiliem você na tomada de decisão.'),
+
+(10, 'A) Depuração tradicional através de breakpoints na aplicação.'),
+(10, 'B) Testes automatizados com frameworks como o JUNIT'),
+(10, 'C) Técnicas de instrumentação como a Jaguar.'),
+(10, 'D) Ferramentas visuais.'),
+
+(11, 'A) Sim, ela pode e contribuirá muito com o trabalho dos profissionais.'),
+(11, 'B) Não, ela ainda necessita de muitas melhorias.')
+
+select questao.idQuestao, questao.titulo, opcao.descricao 
+from questao
+inner join opcao
+on questao.idQuestao = opcao.idQuestao
+
+
+ SELECT COUNT(idResposta) from resposta
+ inner join questao
+ on resposta.idQuestao = questao.idQuestao
+ where questao.idQuestao = 1
+ 
+ 

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+<h:outputStylesheet name="estiloTelaAberta.css" library="css" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Exemplo de uso</title>
+</h:head>
+
+<h:body>
+<f:view contentType="text/html">
+
+<div id="corpo">
+
+
+<h:form id="formExemploUso">
+<p:growl id="mensagem" showDetail="true" sticky="true" />  
+ <p:tabView id="tabView" size="300">  
+  <p:tab title="Bem Vindo ao Sistema CodeForest">
+ 
+
+		<div id="topo">
+
+	<h:graphicImage value="/resources/imagens/each.jpg" 
+	style="width: 539px; height: 91px;"/>
+
+		</div>
+
+<p align="Right">
+<h:commandLink action="./index.jsf">  Voltar </h:commandLink>  
+</p>
+
+		<p:fieldset legend="Perform Analysis">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Primeiramente você deve selecionar com o botão direito o projeto desejado para a avaliação e clicar em 'Perform Analysis'. Posteriormente será realizada a leitura do arquivo XML gerado pela Jaguar." />
+				</h:panelGrid>
+								<p:graphicImage value="/resources/exemploDeUso/imagem1.jpg"/>
+			
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			
+		<p:fieldset legend="Seleção do arquivo XML">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Dentre os arquivos gerados basta escolher o XML desejado que a CodeForest se encarregará de interpretá-lo." />
+				</h:panelGrid>
+								<p:graphicImage value="/resources/exemploDeUso/imagem2.jpg"/>
+			
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			
+			<p:fieldset legend="Solicitando a visualização com a CodeForest">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Em seguida, você deve selecionar a opção 'View- as CodeForest' para que a floresta de cactus com os elementos mais suspeitos seja criada." />
+				</h:panelGrid>
+					<center> 
+								<p:graphicImage value="/resources/exemploDeUso/imagem3.2.jpg"/>
+					</center>
+			</p:fieldset>
+			
+			<br></br>
+			<br></br>
+			<br></br>
+
+
+			<p:fieldset legend="Apresentação dos elementos na CodeForest">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Por meio da solicitação a ferramenta verifica todo o arquivo definido na etapa anterior. É realizada a coloração dos pontos mais suspeitos do programa que podem variar de verde, amarelo, laranja e vermelho, que representa uma alta probabilidade do método conter defeitos. Na CodeForest as classes são representadas como cactus, os métodos como galhos e os comandos executados em sequência (blocos) como espinhos de um galho. É oferecida também uma tabela que possuí em ordem decrescente os métodos contidos na floresta." />
+				</h:panelGrid>
+				<center> 
+								<p:graphicImage value="/resources/exemploDeUso/imagem4.1.jpg"/>
+			</center>
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			
+			
+			<p:fieldset legend="Roodmap">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="A CodeForest também oferece um Roodmap em que o desenvolvedor pode aumentar ou diminuir os métodos apresentados de acordo com o seu valor de suspeição e ainda realizar uma pesquisa textual para encontrar o elemento desejado." />
+				</h:panelGrid>
+				<center> 
+								<p:graphicImage value="/resources/exemploDeUso/imagem5.3.jpg"/>
+			</center>
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			
+			<p:fieldset legend="Interação com o código fonte">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Tanto a floresta de cactus quanto a tabela dos elementos inspecionados acionam diretamente o método solicitado a partir de um simples clique apresentando cada elemento do programa de acordo com o seu valor de suspeição sem fechar a janela de visualização da CodeForest, com o objetivo de torná-la mais intuitiva." />
+				</h:panelGrid>
+				<center> 
+								<p:graphicImage value="/resources/exemploDeUso/imagem6.jpg"/>
+			</center>
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			
+				<p:fieldset legend="Configuração do mínimo de classes e valor de suspeição">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Na CodeForest é disponibilizada a opção de configuração do número mínimo de classes desejadas para exibição na floresta e/ou valor mínimo de suspeição desejado para exibição." />
+				</h:panelGrid>
+				<center> 
+								<p:graphicImage value="/resources/exemploDeUso/imagem7.jpg"/>
+			</center>
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			
+				<p:fieldset legend="Exibição da nova floresta de cactus">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText
+						value="Após configurar os valores mínimos desejados basta clicar em 'Run' e a nova floresta será exibida." />
+				</h:panelGrid>
+				<center> 
+								<p:graphicImage value="/resources/exemploDeUso/imagem8.2.jpg"/>
+			</center>
+			</p:fieldset>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			
+
+			
+			</p:tab>
+</p:tabView>
+
+</h:form>
+
+	</div>
+</f:view>
+</h:body>
+</html>

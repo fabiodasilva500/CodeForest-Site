@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+<h:outputStylesheet name="estiloTelaAberta.css" library="css" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Questionário de satisfação</title>
+</h:head>
+
+<h:body>
+<f:view contentType="text/html">
+
+<div id="corpo">
+
+
+<h:form id="formQuestionario">
+<p:growl id="mensagem" showDetail="true" sticky="true" />  
+ <p:tabView id="tabView" size="250">  
+  <p:tab title="Bem Vindo ao Sistema CodeForest">
+ 
+
+		<div id="topo">
+
+	<h:graphicImage value="/resources/imagens/each.jpg" 
+	style="width: 539px; height: 91px;"/>
+
+		</div>
+
+<p align="Right">
+<h:commandLink action="./index.jsf">  Voltar </h:commandLink>  
+</p>
+
+
+<p:panel header="${questionarioMB.questaoAtual()}" style="margin-bottom:10px;" id = "p1">			
+			<p:panelGrid columns="2">
+
+           <h:selectOneRadio value="${questionarioMB.opcaoAtual.opcao}" converter = "simpleEntityConverter" id = "q01"> 
+        <f:selectItems value="#{questionarioMB.listaOpcoes()}" var="opcoes" itemLabel="#{opcoes.descricao}" 
+itemValue="#{opcoes}"  />
+		<p:ajax event="change"
+                        listener="${questionarioMB.insereResposta()}" update = ""/>
+				
+   			</h:selectOneRadio>
+				</p:panelGrid>
+			</p:panel>
+			
+	<p:panel header="${questionarioMB.questaoAtual()}" style="margin-bottom:10px;" id = "p2">			
+			<p:panelGrid columns="2">
+
+           <h:selectOneRadio value="${questionarioMB.opcaoAtual.opcao}" converter = "simpleEntityConverter" id = "q02">       
+        <f:selectItems value="#{questionarioMB.listaOpcoes()}" var="opcoes" itemLabel="#{opcoes.descricao}" 
+itemValue="#{opcoes}"  />
+		<p:ajax event="change"
+                        listener="${questionarioMB.insereResposta()}" update = ""/>
+				
+   			</h:selectOneRadio>
+				</p:panelGrid>
+			</p:panel>
+						
+	<p:panel header="${questionarioMB.questaoAtual()}" style="margin-bottom:10px;" id = "p3">			
+			<p:panelGrid columns="2">
+
+           <h:selectOneRadio value="${questionarioMB.opcaoAtual.opcao}" converter = "simpleEntityConverter" id = "q03">       
+        <f:selectItems value="#{questionarioMB.listaOpcoes()}" var="opcoes" itemLabel="#{opcoes.descricao}" 
+itemValue="#{opcoes}"  />
+		<p:ajax event="change"
+                        listener="${questionarioMB.insereResposta()}" update = ""/>
+				
+   			</h:selectOneRadio>
+				</p:panelGrid>
+			</p:panel>
+			
+
+<p:panel header="${questionarioMB.questaoAtual()}" style="margin-bottom:10px;" id = "p4">			
+			<p:panelGrid columns="2">
+
+           <h:selectOneRadio value="${questionarioMB.opcaoAtual.opcao}" converter = "simpleEntityConverter" id = "q04">       
+        <f:selectItems value="#{questionarioMB.listaOpcoes()}" var="opcoes" itemLabel="#{opcoes.descricao}" 
+itemValue="#{opcoes}"  />
+			<p:ajax event="change"
+                        listener="${questionarioMB.insereResposta()}" update = ""/>
+				
+			</h:selectOneRadio>
+			
+				</p:panelGrid>
+			</p:panel>
+			
+			
+<p:panel header="${questionarioMB.questaoAtual()}" style="margin-bottom:10px;" id = "p5">			
+			<p:panelGrid columns="2">
+
+           <h:selectOneRadio value="${questionarioMB.opcaoAtual.opcao}" converter = "simpleEntityConverter" id = "q05">       
+        <f:selectItems value="#{questionarioMB.listaOpcoes()}" var="opcoes" itemLabel="#{opcoes.descricao}" 
+itemValue="#{opcoes}"  />
+			<p:ajax event="change"
+                        listener="${questionarioMB.insereResposta()}" update = ""/>
+				
+			</h:selectOneRadio>
+			
+				</p:panelGrid>
+			</p:panel>
+						
+		
+<p:panel header="${questionarioMB.questaoAtual()}" style="margin-bottom:10px;" id = "p6">			
+			<p:panelGrid columns="2">
+
+           <h:selectOneRadio value="${questionarioMB.opcaoAtual.opcao}" converter = "simpleEntityConverter" id = "q06">       
+        <f:selectItems value="#{questionarioMB.listaOpcoes()}" var="opcoes" itemLabel="#{opcoes.descricao}" 
+itemValue="#{opcoes}"  />
+			<p:ajax event="change"
+                        listener="${questionarioMB.insereResposta()}" update = ""/>
+				
+			</h:selectOneRadio>
+			
+				</p:panelGrid>
+			</p:panel>
+			
+			
+	<p:panel header="${questionarioMB.questaoAtual()}" style="margin-bottom:10px;" id = "p7">			
+			<p:panelGrid columns="2">
+
+           <h:selectOneRadio value="${questionarioMB.opcaoAtual.opcao}" converter = "simpleEntityConverter" id = "q07">       
+        <f:selectItems value="#{questionarioMB.listaOpcoes()}" var="opcoes" itemLabel="#{opcoes.descricao}" 
+itemValue="#{opcoes}"  />
+				<p:ajax event="change"
+                        listener="${questionarioMB.insereResposta()}" update = ""/>
+				
+			</h:selectOneRadio>
+			
+				</p:panelGrid>
+			</p:panel>
+			
+			<p:panel header="${questionarioMB.questaoAtual()}" style="margin-bottom:10px;" id = "p8">			
+			<p:panelGrid columns="2">
+
+           <h:selectOneRadio value="${questionarioMB.opcaoAtual.opcao}" converter = "simpleEntityConverter" id = "q08">       
+        <f:selectItems value="#{questionarioMB.listaOpcoes()}" var="opcoes" itemLabel="#{opcoes.descricao}" 
+itemValue="#{opcoes}"  />
+				<p:ajax event="change"
+                        listener="${questionarioMB.insereResposta()}" update = ""/>
+				
+			</h:selectOneRadio>
+			
+				</p:panelGrid>
+			</p:panel>
+			<p:panel header="${questionarioMB.questaoAtual()}" style="margin-bottom:10px;" id = "p9">			
+			<p:panelGrid columns="2">
+
+           <h:selectOneRadio value="${questionarioMB.opcaoAtual.opcao}" converter = "simpleEntityConverter" id = "q09">       
+        <f:selectItems value="#{questionarioMB.listaOpcoes()}" var="opcoes" itemLabel="#{opcoes.descricao}" 
+itemValue="#{opcoes}"  />
+				<p:ajax event="change"
+                        listener="${questionarioMB.insereResposta()}" update = ""/>
+				
+			</h:selectOneRadio>
+			
+				</p:panelGrid>
+			</p:panel>
+			<p:panel header="${questionarioMB.questaoAtual()}" style="margin-bottom:10px;" id = "p10">			
+			<p:panelGrid columns="2">
+
+           <h:selectOneRadio value="${questionarioMB.opcaoAtual.opcao}" converter = "simpleEntityConverter" id = "q10">       
+        <f:selectItems value="#{questionarioMB.listaOpcoes()}" var="opcoes" itemLabel="#{opcoes.descricao}" 
+itemValue="#{opcoes}"  />
+	<p:ajax  event="change" update = ""
+                        listener="${questionarioMB.insereResposta()}"/>
+				<p:ajax event="change"
+                        listener="${questionarioMB.insereResposta()}" update = ""/>
+				
+			</h:selectOneRadio>
+			
+				</p:panelGrid>
+			</p:panel>
+			<p:panel header="${questionarioMB.questaoAtual()}" style="margin-bottom:10px;" id = "p11">			
+			<p:panelGrid columns="2">
+
+           <h:selectOneRadio value="${questionarioMB.opcaoAtual.opcao}" converter = "simpleEntityConverter" id = "q11">       
+        <f:selectItems value="#{questionarioMB.listaOpcoes()}" var="opcoes" itemLabel="#{opcoes.descricao}" 
+itemValue="#{opcoes}"  />
+				<p:ajax  event="change" update = ""
+                        listener="${questionarioMB.insereResposta()}"/>
+			
+			</h:selectOneRadio>
+			
+				</p:panelGrid>
+			</p:panel>
+			
+			
+			
+
+<center> 
+
+ <p:commandButton value="Enviar respostas" ajax="false"
+style="color:black; background-color:orange" size="100"
+name="cmd" action="${questionarioMB.enviar()}" />
+   </center>
+</p:tab>
+</p:tabView>
+
+</h:form>
+
+	</div>
+</f:view>
+</h:body>
+</html>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+<h:outputStylesheet name="estiloTelaAberta.css" library="css" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Fale Conosco</title>
+</h:head>
+
+<h:body>
+<f:view contentType="text/html">
+
+<div id="corpo">
+
+
+<h:form id="formFaleConosco" enctype="multipart/form-data">>
+<p:growl id="mensagem" showDetail="true" sticky="true" />  
+ <p:tabView id="tabView" size="250">  
+  <p:tab title="Bem vindo ao sistema CodeForest">
+ 
+
+
+	<div id="topo">
+
+	<h:graphicImage value="/resources/imagens/each.jpg" 
+	style="width: 539px; height: 89px;"/>
+
+		</div>
+
+<p align="Right">
+<h:commandLink action="./index.jsf">  Voltar </h:commandLink>  
+</p>
+
+
+
+<p:growl id="mensagem" showDetail="true" sticky="true" />  
+
+						
+			<p:panel header="Entre em contato com o time da CodeForest" style="margin-bottom:10px;">
+		   <p:panelGrid styleClass="semBorda" columns="2">  
+		   
+		   
+		   <h:outputText value="Email" />
+						<p:inputText id="txtEmail" maxlength="100" size="100"
+						value="${faleConoscoMB.emailRemetente}">
+		    </p:inputText>
+		  
+			<h:outputText value="Assunto " />
+						<p:inputText id="txtAssunto" maxlength="100" size="100"
+						value="${faleConoscoMB.assunto}">
+		    </p:inputText>
+
+					<h:outputText value="Conteúdo" />
+					<p:inputTextarea rows="6" cols="100" id ="txtConteudo" value="#{faleConoscoMB.conteudo}" queryDelay="750" minQueryLength="4"
+					>
+				    </p:inputTextarea>
+		
+	</p:panelGrid>
+
+	
+	
+	       <h:panelGrid columns="2">
+           <p:selectOneRadio value="${faleConoscoMB.habilitaGridErro}">
+           <f:selectItem itemValue="false" itemLabel="Enviar para todos &#160; &#160; &#160; &#160; &#160;"/> 
+		   <f:selectItem itemValue="true" itemLabel="Selecionar equipe específica"/>
+		   </p:selectOneRadio>			
+		</h:panelGrid>
+			
+			<br> </br>
+			
+			
+	   <h:panelGrid columns="2">
+           <p:selectOneRadio value="${faleConoscoMB.habilitaGridArquivo}">
+           <f:selectItem itemValue="false" itemLabel="Não anexar arquivo &#160; &#160; &#160; &#160;"/> 
+		   <f:selectItem itemValue="true" itemLabel="Anexar arquivo"/>
+		   <p:ajax update="panelHabilitaGridEmail" event="change"/>    
+		   </p:selectOneRadio>			
+		</h:panelGrid>
+
+			<br> </br>
+
+<br> </br>
+
+
+
+
+<p:outputPanel id="panelHabilitaGridEmail">
+<p:panel id="panelArquivo" rendered="#{faleConoscoMB.habilitaGridArquivo}" styleClass="semBorda">  
+          <p:fileUpload fileUploadListener="#{faleConoscoMB.uploadListener}" />
+</p:panel>
+</p:outputPanel>
+
+<br> </br>
+<center> 
+						<h:panelGroup>
+
+							<p:commandButton value="Enviar Email" ajax="false"
+                            style="color:black; background-color:orange" size="100"
+ 								name="cmd" action="${faleConoscoMB.enviarEmail()}" />
+						</h:panelGroup>
+						</center>
+						
+
+					</p:panel>
+   
+			</p:tab>
+</p:tabView>
+
+</h:form>
+
+	</div>
+</f:view>
+
+
+</h:body>
+</html>
