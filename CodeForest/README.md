@@ -7,6 +7,6 @@ Os resultados são apresentados na metáfora visual através dos relatórios de 
 Esta aplicação contém todas as informações necessárias para o uso da ferramenta CodeForest, como tutoriais de instalação, exemplos de uso, avaliação
 de usabilidade e gráficos que demonstram o nível de satisfação que os desenvolvedores tiveram durante o uso da CodeForest.
 
-A CodeForest está disponível no seguinte endereço: https://github.com/fabiodasilva500/CodeForest-Site
+A CodeForest está disponível no seguinte endereço: https://github.com/fabiodasilva500/CodeForest-Plugin
 
 A Jaguar está disponível no seguinte endereço:  https://github.com/henriquelemos0/jaguar
