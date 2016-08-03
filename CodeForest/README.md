@@ -5,7 +5,7 @@ Ela utiliza informações do teste para verificar os trechos da aplicação com 
 Os resultados são apresentados na metáfora visual através dos relatórios de erros gerados pela Jaguar para a identificação dos elementos mais suspeitos.
 
 Esta aplicação contém todas as informações necessárias para o uso da ferramenta CodeForest, como tutoriais de instalação, exemplos de uso, avaliação
-de usabilidade e gráficos que demonstram o nível de satisfação que os desenvolvedores tiveram durante o uso da CodeForest.
+de usabilidade e gráficos que demonstram o nível de satisfação que os desenvolvedores tiveram durante o uso da ferramenta.
 
 A CodeForest está disponível no seguinte endereço: https://github.com/fabiodasilva500/CodeForest-Plugin
 
