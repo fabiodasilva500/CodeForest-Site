@@ -2,7 +2,7 @@ package Entidades;
 
 import java.io.Serializable;
 
-import Conversor.BaseEntity;
+import Conversor.BaseEntity; //
 
 public class Empresa implements BaseEntity, Serializable {  
 	  
@@ -36,6 +36,6 @@ public class Empresa implements BaseEntity, Serializable {
 		this.nome = nome;
 	}  
   
-    // Métodos getters e setters  
-    // Não esquecer os métodos equals e hashCode  
+    // Mï¿½todos getters e setters  
+    // Nï¿½o esquecer os mï¿½todos equals e hashCode  
 }  
